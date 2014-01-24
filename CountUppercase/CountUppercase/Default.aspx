@@ -11,7 +11,7 @@
     <h1>Hur många versaler?</h1>
     <form id="CountUppercaseForm" runat="server">
     <div>
-        <asp:TextBox ID="UpperCaseTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="UpperCaseTextBox" runat="server" TextMode="MultiLine"></asp:TextBox>
     
         <asp:Button ID="CountButton" runat="server" OnClick="CountButton_Click" Text="Räkna Versaler" />
 
