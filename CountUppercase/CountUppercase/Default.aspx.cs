@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CountUppercase.Model;
 
 namespace CountUppercase
 {
@@ -16,22 +17,14 @@ namespace CountUppercase
 
         protected void CountButton_Click(object sender, EventArgs e)
         {
+            //hämtar input
             String inputString = UpperCaseTextBox.Text.ToString();
 
-            int uppercaseCount = 0;
+            //skickar till funktion som räknar versaler
+            int uppercaseCount = TextAnalyzer.GetNumberOfCapitals(inputString);
 
-            foreach(char character in inputString)
-            {
-                int charCode = (int)character;
-
-                if (charCode >= 65 && charCode <= 90 || charCode == 196 || charCode == 197 || charCode == 214)
-                {
-                    uppercaseCount++; 
-                }
-   
-            }
+            //Skriver ut antal versaler och gör textboxen oanvändbar.
             UpperCaseTextBox.Enabled = false;
-
             Result.Text = uppercaseCount.ToString();
         }
     }
