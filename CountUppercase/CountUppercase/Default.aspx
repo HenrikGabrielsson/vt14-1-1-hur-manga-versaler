@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CountUppercase.Default" ViewStateMode="Disabled" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CountUppercase.Default" %>
 
 <!DOCTYPE html>
 
@@ -13,9 +13,9 @@
     <div>
         <asp:TextBox ID="UpperCaseTextBox" runat="server" TextMode="MultiLine"></asp:TextBox>
     
-        <asp:Button ID="CountButton" runat="server" OnClick="CountButton_Click" Text="Räkna Versaler" />
+        <asp:Button ID="CapitalCountButton" runat="server" OnClick="CapitalCountButton_Click" Text="Räkna Versaler" />
 
-        <asp:Label ID="Result" runat="server"></asp:Label>
+        <asp:Label ID="Result" runat="server" Text="Antal Versaler: "></asp:Label>
     </div>
     </form>
     

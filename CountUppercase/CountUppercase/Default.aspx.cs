@@ -15,17 +15,35 @@ namespace CountUppercase
 
         }
 
-        protected void CountButton_Click(object sender, EventArgs e)
+        protected void CapitalCountButton_Click(object sender, EventArgs e)
         {
+
+            if(UpperCaseTextBox.Enabled == true)
+            { 
             //hämtar input
             String inputString = UpperCaseTextBox.Text.ToString();
 
             //skickar till funktion som räknar versaler
             int uppercaseCount = TextAnalyzer.GetNumberOfCapitals(inputString);
 
-            //Skriver ut antal versaler och gör textboxen oanvändbar.
+            //ändrar knappen och gör textboxen oanvändbar.
+            CapitalCountButton.Text = "Rensa";
             UpperCaseTextBox.Enabled = false;
-            Result.Text = uppercaseCount.ToString();
+
+            //Skriver ut antal versaler
+            Result.Text += uppercaseCount.ToString();
+            }
+
+            //Rensa sidan och låt användaren skriva en ny sträng.
+            else
+            {
+                UpperCaseTextBox.Enabled = true;
+                UpperCaseTextBox.Text = "";
+                CapitalCountButton.Text = "Räkna Versaler";
+                Result.Text = "Antal Versaler: ";
+            }
+
+            
         }
     }
 }
