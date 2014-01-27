@@ -16,9 +16,8 @@ namespace CountUppercase.Model
             //loop som hittar versaler och ökar räknaren
             foreach (char character in text)
             {
-                int charCode = (int)character;
 
-                if (charCode >= 65 && charCode <= 90 || charCode == 196 || charCode == 197 || charCode == 214)
+                if (char.IsUpper(character))
                 {
                     uppercaseCount++;
                 }
