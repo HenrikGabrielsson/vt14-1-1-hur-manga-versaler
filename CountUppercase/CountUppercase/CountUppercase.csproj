@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="errorPage.html" />
+    <Content Include="style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

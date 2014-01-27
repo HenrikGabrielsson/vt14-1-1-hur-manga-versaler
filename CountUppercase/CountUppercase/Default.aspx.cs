@@ -18,7 +18,7 @@ namespace CountUppercase
         protected void CapitalCountButton_Click(object sender, EventArgs e)
         {
 
-            if(UpperCaseTextBox.Enabled == true)
+            if(UpperCaseTextBox.Text != "")
             { 
             //hämtar input
             String inputString = UpperCaseTextBox.Text.ToString();

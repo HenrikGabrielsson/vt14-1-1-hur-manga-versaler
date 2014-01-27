@@ -1,0 +1,44 @@
+﻿body
+{
+    font-family:Calibri;
+}
+
+form
+{
+    background-color:#DDDDDD;
+    border:1px solid #333333;
+    
+    margin:auto;
+    overflow:auto;
+
+    min-height:100px;
+    width:400px;
+}
+
+textarea
+{
+    float:left;
+    width:350px;
+}
+
+input
+{
+    float:left;
+}
+
+#result_div
+{    
+    background-color:#DDDDDD;
+    border:1px solid #333333;
+    
+    margin:20px auto 0 auto;
+    padding:5px;
+    overflow:auto;
+
+    max-width:390px;
+}
+
+h1
+{
+    text-align:center;
+}

@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CountUppercase.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CountUppercase.Default" ViewStateMode="Disabled" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Hur många versaler?</title>
+    <link rel="stylesheet" href="~/style/style.css" type="text/css" />
 </head>
 <body>
 
@@ -15,10 +16,12 @@
     
         <asp:Button ID="CapitalCountButton" runat="server" OnClick="CapitalCountButton_Click" Text="Räkna Versaler" />
 
-        <asp:Label ID="Result" runat="server" Text="Antal Versaler: "></asp:Label>
+
     </div>
     </form>
-    
+    <div id="result_div">
+        <asp:Label ID="Result" runat="server" Text="Antal Versaler: "></asp:Label>
+    </div>
 
 </body>
 </html>
