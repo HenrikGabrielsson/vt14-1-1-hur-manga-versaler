@@ -18,32 +18,29 @@ namespace CountUppercase
         protected void CapitalCountButton_Click(object sender, EventArgs e)
         {
 
-            if(UpperCaseTextBox.Text != "")
-            { 
-            //hämtar input
-            String inputString = UpperCaseTextBox.Text.ToString();
-
-            //skickar till funktion som räknar versaler
-            int uppercaseCount = TextAnalyzer.GetNumberOfCapitals(inputString);
-
-            //ändrar knappen och gör textboxen oanvändbar.
-            CapitalCountButton.Text = "Rensa";
-            UpperCaseTextBox.Enabled = false;
-
-            //Skriver ut antal versaler
-            Result.Text += uppercaseCount.ToString();
-            }
-
-            //Rensa sidan och låt användaren skriva en ny sträng.
-            else
+            if (!String.IsNullOrWhiteSpace(UpperCaseTextBox.Text))
             {
-                UpperCaseTextBox.Enabled = true;
-                UpperCaseTextBox.Text = "";
-                CapitalCountButton.Text = "Räkna Versaler";
-                Result.Text = "Antal Versaler: ";
+                //skickar till funktion som räknar versaler
+                int uppercaseCount = TextAnalyzer.GetNumberOfCapitals(UpperCaseTextBox.Text);
+
+                //ändrar knappen och gör textboxen oanvändbar.
+                CapitalCountButton.Text = "Rensa";
+                UpperCaseTextBox.Enabled = false;
+
+                //Skriver ut antal versaler
+                Result.Text += uppercaseCount.ToString();
             }
 
-            
+            ////Rensa sidan och låt användaren skriva en ny sträng.
+            //else
+            //{
+            //    UpperCaseTextBox.Enabled = true;
+            //    UpperCaseTextBox.Text = "";
+            //    CapitalCountButton.Text = "Räkna Versaler";
+            //    Result.Text = "Antal Versaler: ";
+            //}
+
+
         }
     }
 }
