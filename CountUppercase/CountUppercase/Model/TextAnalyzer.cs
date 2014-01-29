@@ -16,16 +16,14 @@ namespace CountUppercase.Model
             //loop som hittar versaler och ökar räknaren
             foreach (char character in text)
             {
-
+                
                 if (char.IsUpper(character))
                 {
                     uppercaseCount++;
                 }
-
             }
 
             return uppercaseCount;
-
         }
     }
 }
